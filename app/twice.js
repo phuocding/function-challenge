@@ -51,4 +51,24 @@ const composeb = (f1, f2) => {
 // add(2, 3) => 5
 // mul(5, 7) => 35
 
-module.exports = { twice, reverse, composeu, composeb };
+/*  2.12 Write a limit function that allows 
+a binary function to be called a limited 
+number of times*/
+
+const limit = (func, a) => {
+  return (x, y) => {
+    if (a > 0) {
+      a = 0;
+      return func(x, y);
+    }
+    // a = 0;
+    return undefined;
+  }
+};
+
+// var addLimited = limit(add, 2); // addLimited = (a, b) => {...}
+// console.log(addLimited(3, 4)); // 7
+// console.log(addLimited(3, 5)); // undefined
+// console.log(addLimited(4, 5)); // undefined
+
+module.exports = { twice, reverse, doubl, square, composeu, composeb, limit };
