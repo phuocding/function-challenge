@@ -1,9 +1,6 @@
 /* Without writing any new functions, 
 show 3 ways to create the inc function */
 const { add, sub, mul, addf, liftf, curry } = require('../app/binaryfunc');
-const addf = require('../app/addf');
-const curry = require('../app/curry');
-const liftf = require('../app/liftf');
 
 // 1st way
 const inc = addf(1); // TODO;
